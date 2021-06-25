@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>班级成绩</title>
+        <style type="text/css">
+            @import url("manager2.css");
+        </style>
+    </head>
+
+    <body  style="text-align: center;
+    background-image:url(./third.jpg);
+    background-color: rgb(89, 184, 228);
+    background-size: 100% 100%; ">
+
+
+        <table style="margin-bottom:10px; margin: auto;
+        font-family: verdana,arial,sans-serif;
+        font-size:20px;
+        color:#333333;
+        border-width: 1px;
+        border-color: #999999;
+        border-collapse: collapse;">
+            <tr>
+                <th style="background:#b5cfd2 ;border-width: 1px;
+                padding: 8px;
+                border-style: solid;
+                border-color: #999999;">班级名</th>                
+                <th style="background:#b5cfd2 ;border-width: 1px;
+                padding: 8px;
+                border-style: solid;
+                border-color: #999999;">学生姓名</th>
+                <th style="background:#b5cfd2 ;border-width: 1px;
+                padding: 8px;
+                border-style: solid;
+                border-color: #999999;">课程</th>
+                <th style="background:#b5cfd2;border-width: 1px;
+                padding: 8px;
+                border-style: solid;
+                border-color: #999999;">成绩</th>
+            </tr>      
+            {% for item in items9 %}
+            <tr>
+                <td  style=" background:#dcddc0 ;border-width: 1px; padding: 8px;border-style: solid;
+                border-color: #999999;">{{ item[0] }}</td>
+                <td  style=" background:#dcddc0;border-width: 1px; padding: 8px;border-style: solid;
+                border-color: #999999;">{{ item[1] }}</td>
+                <td  style=" background:#dcddc0 ;border-width: 1px; padding: 8px;border-style: solid;
+                border-color: #999999;">{{ item[2] }}</td>
+                <td  style=" background:#dcddc0;border-width: 1px; padding: 8px;border-style: solid;
+                border-color: #999999;">{{ item[3] }}</td>              
+            </tr>
+            {% endfor %}
+        </table>
+        <form action="/class_pf" method="get" >
+            <input type="submit" value="返回">
+        </form>
+
+    </body>
+</html>

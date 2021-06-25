@@ -1,0 +1,15 @@
+body {
+    text-align: center;
+    background-image:url(./first.jpg);
+    background-size: 100% 100%; 
+    font-size: x-large;
+    margin:0 auto;
+
+ 
+}
+div{
+    margin-left:auto;
+
+    margin-right:auto;
+
+}

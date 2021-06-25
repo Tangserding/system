@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>课程计划</title>
+        <link rel="stylesheet"  href="manager2.css" >
+        </style>
+    </head>
+
+    <body style="text-align: center;
+    background-color: rgb(89, 184, 228);
+    background-image:url(./third.jpg);
+    background-size: 100% 100%; ">
+        <div style=" width:800px; height:500px; position:absolute; top:50%; left:50%; margin-left:-400px; margin-top:-130px;">
+            <table style="margin-bottom:10px; margin: auto;
+            font-family: verdana,arial,sans-serif;
+            font-size:20px;
+            color:#333333;
+            border-width: 1px;
+            border-color: #999999;
+            border-collapse: collapse;">
+                <tr>
+                    <th  style="background:#b5cfd2;border-width: 1px;
+                    padding: 8px;
+                    border-style: solid;
+                    border-color: #999999;">班级名</th>                
+                    <th style="background:#b5cfd2;border-width: 1px;
+                    padding: 8px;
+                    border-style: solid;
+                    border-color: #999999;">课程名</th>
+                    <th style="background:#b5cfd2 ;border-width: 1px;
+                    padding: 8px;
+                    border-style: solid;
+                    border-color: #999999;">课程时间</th>
+                </tr>      
+                {% for item in items7 %}
+                <tr>
+                    <td  style=" background:#dcddc0;border-width: 1px; padding: 8px;border-style: solid;
+                    border-color: #999999;">{{ item[0] }}</td>
+                    <td  style=" background:#dcddc0 ;border-width: 1px; padding: 8px;border-style: solid;
+                    border-color: #999999;">{{ item[1] }}</td>
+                    <td  style=" background:#dcddc0 ;border-width: 1px; padding: 8px;border-style: solid;
+                    border-color: #999999;">{{ item[2] }}</td>                
+                </tr>
+                {% endfor %}
+            </table>
+
+            <form action="/plan" method="get" >
+            <input type="submit" value="返回">
+            </form>
+        </div> 
+    </body>
+</html>
